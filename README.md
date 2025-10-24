@@ -1,20 +1,87 @@
 # block_cipher
+
 ## How to Run
 
-### Step 1: Make sure you have Python installed
+### Option 1: Download the file directly
+
+#### Step 1: Make sure you have Python installed
 Check if Python is installed by opening terminal/command prompt and typing:
 ```bash
 python --version
 ```
 You need Python 3.6 or higher. If you don't have it, download from [python.org](https://www.python.org/downloads/)
 
-### Step 2: Download the code
+#### Step 2: Download the code
 Download `block_cipher.py` from this repository and save it to any folder on your computer.
 
-### Step 3: Run the code
+#### Step 3: Run the code
 Open terminal/command prompt, navigate to the folder where you saved the file, and run:
 ```bash
 python block_cipher.py
 ```
 
 That's it! You'll see the encryption and decryption demo in action.
+
+---
+
+### Option 2: Clone the repository
+
+#### Step 1: Make sure you have Git and Python installed
+Check if Git is installed:
+```bash
+git --version
+```
+If not installed, download from [git-scm.com](https://git-scm.com/downloads)
+
+Check if Python is installed:
+```bash
+python --version
+```
+You need Python 3.6 or higher. If you don't have it, download from [python.org](https://www.python.org/downloads/)
+
+#### Step 2: Clone the repository
+Open terminal/command prompt and run:
+```bash
+git clone https://github.com/jhashen/blockcipher.git
+```
+
+#### Step 3: Navigate to the folder
+```bash
+cd blockcipher
+```
+
+#### Step 4: Run the code
+```bash
+python block_cipher.py
+```
+
+#### Step 5: To get updates later (if code changes)
+If the repository is updated, you can pull the latest changes:
+```bash
+cd blockcipher
+git pull origin main
+```
+(Use `master` instead of `main` if that's the default branch)
+
+---
+
+### Using it in your own Python script (if you want to test the code for your self)
+Create a new Python file in the same folder as `block_cipher.py`:
+
+```python
+from block_cipher import BlockSecure
+
+# Encrypt a message
+key = b"MyPassword"
+cipher = BlockSecure(key)
+encrypted = cipher.encrypt(b"Hello World!")
+decrypted = cipher.decrypt(encrypted)
+
+print(f"Encrypted: {encrypted.hex()}")
+print(f"Decrypted: {decrypted.decode()}")
+```
+
+Save and run:
+```bash
+python your_file_name.py
+```
