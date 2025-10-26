@@ -1,4 +1,4 @@
-# block_cipher
+# block and stream cipher
 
 ## How to Run
 
