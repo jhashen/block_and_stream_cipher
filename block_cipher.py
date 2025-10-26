@@ -11,7 +11,7 @@ class BlockSecure:
     BLOCK_SIZE = 8  # 64 bits
     
     # Number of encryption rounds
-    ROUNDS = 4
+    ROUNDS = 2
     
     # S-box for substitution (provides confusion)
     # This is a simple S-box - in practice, you'd want a cryptographically stronger one
