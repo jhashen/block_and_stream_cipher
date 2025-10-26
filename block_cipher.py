@@ -356,19 +356,6 @@ def demo():
     
     print("=" * 70)
     
-    # Additional test with different message
-    print("\nAdditional Test - Short Message")
-    print("-" * 70)
-    short_msg = b"Hello, World!"
-    print(f"Message: {short_msg.decode()}")
-    
-    encrypted = cipher.encrypt(short_msg)
-    print(f"Encrypted: {encrypted.hex()}")
-    
-    decrypted = cipher.decrypt(encrypted)
-    print(f"Decrypted: {decrypted.decode()}")
-    print(f"Match: {'✓ Yes' if short_msg == decrypted else '✗ No'}")
-
 
 if __name__ == "__main__":
     demo()
