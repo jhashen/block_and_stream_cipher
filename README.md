@@ -12,7 +12,7 @@ python --version
 You need Python 3.6 or higher. If you don't have it, download from [python.org](https://www.python.org/downloads/)
 
 #### Step 2: Download the code
-Download `block_cipher.py` from this repository and save it to any folder on your computer.
+Download `block_cipher.py` and 'streamcipher.py' from this repository and save it to any folder on your computer.
 
 #### Step 3: Run the code
 Open terminal/command prompt, navigate to the folder where you saved the file, and run:
@@ -42,46 +42,26 @@ You need Python 3.6 or higher. If you don't have it, download from [python.org](
 #### Step 2: Clone the repository
 Open terminal/command prompt and run:
 ```bash
-git clone https://github.com/jhashen/blockcipher.git
+git clone https://github.com/jhashen/block_and_stream_cipher.git
 ```
 
 #### Step 3: Navigate to the folder
 ```bash
-cd blockcipher
+cd block_and_stream_cipher
 ```
 
-#### Step 4: Run the code
+#### Step 4: Run the code 
 ```bash
 python block_cipher.py
+python streamcipher.py
 ```
 
 #### Step 5: To get updates later (if code changes)
 If the repository is updated, you can pull the latest changes:
 ```bash
-cd blockcipher
+cd block_and_stream_cipher
 git pull origin main
 ```
 (Use `master` instead of `main` if that's the default branch)
 
 ---
-
-### Using it in your own Python script (if you want to test the code for your self)
-Create a new Python file in the same folder as `block_cipher.py`:
-
-```python
-from block_cipher import BlockSecure
-
-# Encrypt a message
-key = b"MyPassword"
-cipher = BlockSecure(key)
-encrypted = cipher.encrypt(b"Hello World!")
-decrypted = cipher.decrypt(encrypted)
-
-print(f"Encrypted: {encrypted.hex()}")
-print(f"Decrypted: {decrypted.decode()}")
-```
-
-Save and run:
-```bash
-python your_file_name.py
-```
